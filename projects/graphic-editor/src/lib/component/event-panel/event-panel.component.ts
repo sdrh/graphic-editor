@@ -48,7 +48,7 @@ export class EventPanelComponent implements OnInit {
   getPageList(): void {
     this.pageList = this.ref.instance.pages
       .map((page) => ({
-        name: page.name || `页面${page.id}`,
+        name: page.name || `page${page.id}`,
         value: page.id,
       }))
       .filter((item) => item.value !== this.ref.instance.page.id);
