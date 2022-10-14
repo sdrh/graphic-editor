@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="select" (click)="toggleExpand($event)">
-    <span>{{ selectedItem?.name || "请选择..." }}</span>
+    <span>{{ selectedItem?.name || "please choose..." }}</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="zoom-arrow"
@@ -40,7 +40,7 @@
       </ng-container>
     </li>
     <li class="menu-item" *ngIf="!items.length">
-      <span style="text-align: center; width: 100%">无数据</span>
+      <span style="text-align: center; width: 100%">no data</span>
     </li>
   </ul>
 </div>
