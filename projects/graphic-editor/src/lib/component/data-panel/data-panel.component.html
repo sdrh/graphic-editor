@@ -14,7 +14,7 @@
     ></span>
   </div>
   <div class="general-row">
-    <span class="label">类型</span>
+    <span class="label">type</span>
     <ng-select
       class="select"
       [items]="dataTypeList"
@@ -24,13 +24,13 @@
   </div>
   <ng-container *ngIf="dataSetting.type === dataType.Api">
     <div class="general-row">
-      <span class="label">地址</span>
+      <span class="label">address</span>
     </div>
     <div class="general-row">
       <textarea
         class="urlInput"
         rows="4"
-        placeholder="输入http或https协议地址或绝对地址"
+        placeholder="Enter http or https protocol address or absolute address"
         [(ngModel)]="dataSetting.apiUrl"
         (ngModelChange)="emitChange()"
       ></textarea>
@@ -44,12 +44,12 @@
         />
         <span></span>
       </label>
-      <span>轮询</span>
+      <span>polling</span>
       <input
         class="interval"
         type="number"
         min="0"
-        placeholder="间隔(s)"
+        placeholder="interval(s)"
         [(ngModel)]="dataSetting.interval"
         (ngModelChange)="emitChange()"
       />
@@ -57,7 +57,7 @@
   </ng-container>
   <ng-container *ngIf="dataSetting.type === dataType.PageData">
     <div class="general-row">
-      <span class="label">数据源</span>
+      <span class="label">data source</span>
       <ng-select
         class="select"
         [items]="pageDataList"
@@ -71,7 +71,7 @@
       <textarea
         class="urlInput"
         rows="8"
-        placeholder="输入json字符串"
+        placeholder="input json string"
         [(ngModel)]="dataSetting.const"
         (ngModelChange)="emitChange()"
       ></textarea>
