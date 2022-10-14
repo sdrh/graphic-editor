@@ -72,27 +72,27 @@ export class GraphicEditorComponent
   toolBtns: NavButton[] = [
     {
       type: 'widget-library',
-      name: '组件库',
+      name: 'Component library',
       icon: 'icon-sucaiku',
       component: WidgetLibComponent,
       isActive: true,
     },
   ];
-  /** 选中的部件 */
+  /** selected part */
   selectedWidgets: ComponentRef<WidgetComponent>[] = [];
-  /** 已创建的部件实例 */
+  /** Created part instance */
   widgets: ComponentRef<WidgetComponent>[] = [];
-  // /** 已有的页面 */
+  // /** existing page */
   pages: Page[] = [];
-  /** 当前页面 */
+  /** The current page */
   get currentPage(): Page {
     return this.pages.find((page) => !!page.selected) || this.pages[0];
   }
-  /** 鼠标点击标志，用于绘制选中区域 */
+  /** Mouse click flag, used to draw the selected area */
   isMouseDown = false;
-  /** resize左侧边栏标志 */
+  /** resize left sidebar logo */
   isResizeStart = false;
-  /** 左侧边栏宽度 */
+  /** left sidebar width */
   leftWidth = 210;
   tempMousePos: Coordinate = { x: 0, y: 0 };
   selectionCtx!: CanvasRenderingContext2D;
@@ -421,7 +421,7 @@ export class GraphicEditorComponent
   }
 
   /**
-   * 拖放新控件
+   * Drag and drop new controls
    */
   onCompAreaDrop(event: DragEvent): void {
     event.preventDefault();
@@ -629,7 +629,7 @@ export class GraphicEditorComponent
     updatePages.forEach((page) => (page._modified = false));
   }
 
-  // 通过两矩形中心距离判断是否相交
+  // Determine if they intersect by the distance between the centers of the two rectangles
   isWidgetInRect(
     widget: WidgetComponent,
     x: number,
