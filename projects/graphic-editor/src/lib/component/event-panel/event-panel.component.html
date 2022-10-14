@@ -1,12 +1,12 @@
 <div class="panel">
   <div class="header">
-    <span class="title">事件</span>
+    <span class="title">event</span>
     <span class="action" (click)="deleteListener()"
       ><i class="iconfont icon-delete"></i
     ></span>
   </div>
   <div class="general-row">
-    <span class="label">类型</span>
+    <span class="label">type</span>
     <ng-select
       class="select"
       [items]="eventTypeList"
@@ -15,7 +15,7 @@
     ></ng-select>
   </div>
   <div class="general-row">
-    <span class="label">行为</span>
+    <span class="label">Behavior</span>
     <ng-select
       class="select"
       [items]="actionTypeList"
@@ -25,7 +25,7 @@
   </div>
   <ng-container *ngIf="listener.action === actionType.JumpUrl">
     <div class="general-row">
-      <span class="label">目标位置</span>
+      <span class="label">target location</span>
       <ng-select
         class="select"
         [items]="openUrlTypeList"
@@ -40,7 +40,7 @@
       <textarea
         class="input"
         rows="4"
-        placeholder="输入http或https协议地址"
+        placeholder="Enter http or https protocol address"
         [(ngModel)]="listener.actionData.jumpUrl"
         (ngModelChange)="emitChange()"
       ></textarea>
@@ -48,7 +48,7 @@
   </ng-container>
   <ng-container *ngIf="listener.action === actionType.JumpPage">
     <div class="general-row">
-      <span class="label">页面</span>
+      <span class="label">page</span>
       <ng-select
         class="select"
         [items]="pageList"
@@ -59,7 +59,7 @@
       </ng-select>
     </div>
     <div class="general-row">
-      <span class="label">目标位置</span>
+      <span class="label">target location</span>
       <ng-select
         class="select"
         [items]="openPageTypeList"
@@ -71,7 +71,7 @@
       *ngIf="listener.actionData.jumpTarget === openPageType.LinkArea"
       class="general-row"
     >
-      <span class="label">链接区域</span>
+      <span class="label">link area</span>
       <ng-select
         class="select"
         [items]="linkWidgetList"
