@@ -28,14 +28,14 @@ import { AppService } from './app.service';
 const arr = [
   {
     category: WidgetCategory.Advanced,
-    name: '图表',
+    name: 'chart',
     icon: 'icon-chart',
     type: 'chart',
     width: 100,
     height: 100,
     component: ChartComponent,
     settings: [
-      { type: 'chart', name: '图表', component: ChartSettingComponent },
+      { type: 'chart', name: 'chart', component: ChartSettingComponent },
       'appearance',
     ],
   },
