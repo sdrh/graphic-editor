@@ -16,8 +16,8 @@ export class PageSettingComponent implements OnInit, OnChanges {
   @Input() page!: Page;
 
   navItems: NavButton[] = [
-    { type: 'page-settings', name: '页面设置', isActive: true },
-    { type: 'page-data', name: '数据' },
+    { type: 'page-settings', name: 'page settings', isActive: true },
+    { type: 'page-data', name: 'data' },
   ];
 
   // get color(): string {
