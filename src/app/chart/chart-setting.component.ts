@@ -11,7 +11,7 @@ export enum ChartType {
   styleUrls: ['./chart-setting.component.scss'],
 })
 export class ChartSettingComponent implements OnInit {
-  chartTypeList = [{ name: '柱状图', value: ChartType.Bar }];
+  chartTypeList = [{ name: 'Histogram', value: ChartType.Bar }];
   sourceList: any[] = [];
 
   constructor(public ref: ComponentRef<WidgetComponent>) {}
