@@ -65,19 +65,19 @@ export class ChartComponent
     this.widgetSrv.onDataChange().subscribe(() => {
       this.draw();
     });
-    // 绘制图表
+    // draw a chart
     // myChart.setOption({
     //   title: {
-    //     text: 'ECharts 入门示例',
+    //     text: 'ECharts Getting started example',
     //   },
     //   tooltip: {},
     //   xAxis: {
-    //     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+    //     data: ['shirt', 'cardigan', 'chiffon shirt', 'trousers', 'high heels', 'socks'],
     //   },
     //   yAxis: {},
     //   series: [
     //     {
-    //       name: '销量',
+    //       name: 'sales',
     //       type: 'bar',
     //       data: [5, 20, 36, 10, 10, 20],
     //     },
@@ -95,14 +95,16 @@ export class ChartComponent
           legend: {},
           tooltip: {},
           dataset: {
-            // 提供一份数据。
+            // Provide a piece of data.
             source: chartData.value,
           },
-          // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
+          // declares an x-axis, category axis（category）. By default, the category axis corresponds to the first column of dataset.
           xAxis: { type: 'category' },
-          // 声明一个 Y 轴，数值轴。
+          
+          // Declare a Y axis, the value axis.
           yAxis: {},
-          // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+          // Declare multiple bar series, by default, each series will automatically correspond to each column of the dataset..
+          
           series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }],
         };
         this.chart.setOption(option);
